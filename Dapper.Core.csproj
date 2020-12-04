@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PackageId>Dapper.Core</PackageId>
+    <AssemblyName>Dapper.Core</AssemblyName>
+    <RootNamespace>Dapper.Core</RootNamespace>
+    <Author>André Monteiro</Author>
+    <Description>Biblioteca para trabalhar com dapper em projetos asp.net core 3.0</Description>
+    <Company>Phidelis</Company>
+    <Version>1.0.0.30</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <ApplicationIcon />
+    <Win32Resource />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <OutputPath>$(RepoRoot)</OutputPath>
+    <AssemblyVersion>1.0.0.30</AssemblyVersion>  
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="Dommel" Version="2.0.0-beta6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+  </ItemGroup>
+</Project>
