@@ -10,7 +10,7 @@
     <Win32Resource />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <OutputPath>$(RepoRoot)</OutputPath>
-    <AssemblyVersion>1.0.0.30</AssemblyVersion>  
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>  
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.30" />
