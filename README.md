@@ -35,7 +35,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
   }
 ```
 
-### Utilizando ExecuteMultiply
+### ExecuteMultiply
 ```c#
   var sql = "SELECT * FROM Classe WHERE Id = 1; SELECT * FROM Classe2;";
   var grid = await base.ExecuteMultiply(sql);
@@ -43,7 +43,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
   var lista = grid.Read<IEnumerable<Classe>>();
 ```
 
-### Utilizando MultiMapAsync
+### MultiMapAsync
 ```c#
   var map = await base.MultiMapAsync<classe1, classe2, classe1>($@"
       SELECT DISTINCT classe1.*,classe2.*
@@ -56,7 +56,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
   });
 ```
 
-### Utilizando QueryAsync
+### QueryAsync
 ```c#
   public async Task<IEnumerable<Classe>> Listar()
   {
@@ -66,7 +66,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
   }
 ```
 
-### Utilizando QueryFirstOrDefaultAsync
+### QueryFirstOrDefaultAsync
 ```c#
     public async Task<Classe> ObterPorId(Guid id)
     {
@@ -76,7 +76,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
     }
 ```
 
-### Utilizando SelectFirstOrDefaultAsync
+### SelectFirstOrDefaultAsync
 ```c#
     public async Task<Classe> ObterPorId(Guid id)
     {
@@ -85,7 +85,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
     }
 ```
 
-### Utilizando SelectAsync
+### SelectAsync
 ```c#
     public async Task<IEnumerable<Classe>> ObterPorId(Guid id)
     {
@@ -136,7 +136,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
 ```
 
 ## Validação
-### Utilizando AnyAsync
+### AnyAsync
 ```c#
     public async Task<bool> Existe(Guid id)
     {
@@ -145,7 +145,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
 ```
 
 ## Transação
-### Utilizando Utilizando Transação
+### Utilizando Transação
 ```c#
     using (var trans = new Dapper.Core.Base.TransactionScope(_repository1, _repository2, _repository3))
     {
