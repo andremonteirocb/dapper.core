@@ -1,9 +1,9 @@
-# dapper.core
+# DAPPER [![Build Status](https://secure.travis-ci.org/morrisjs/morris.js.png?branch=master)](http://travis-ci.org/morrisjs/morris.js)
 .NET Class Library for integration with DAPPER <br />
 .NET Core 3.0
 
 ## Configurações
-### Startup.cs
+### startup.cs
 ```c# 
 Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetConnectionString("connectionstring_name"));
 ```
