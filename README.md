@@ -2,19 +2,22 @@
 .NET Class Library for integration with DAPPER <br />
 .NET Core 3.0
 
-### Informando a connection string (startup.cs)
+## Configurações
+### Startup.cs
 ```c# 
 Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetConnectionString("connectionstring_name"));
 ```
 
-### Implementando a interface IRepository
+## Implementação
+### Interface IRepository
 ```c#
   public class LogRepository : Repository<Log>, ILogRepository
   {
   }
 ```
 
-### Utilizando GetAsync
+## Obter
+### GetAsync
 ```c#
   public async Task<Classe> ObterPorId(Guid id)
   {
@@ -23,53 +26,13 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
   }
 ```
 
-### Utilizando GetAllAsync
+### GetAllAsync
 ```c#
   public async Task<IEnumerable<Classe>> ObterTodos()
   {
       var lista = await base.GetAllAsync(id);
       return lista;
   }
-```
-
-### Utilizando GetPagedAsync
-```c#
-    public async Task<IEnumerable<Classe>> GetPagedAsync(int pageNumber, int pageSize)
-    {
-        return await base.GetPagedAsync(pageNumber, pageSize);
-    }
-```
-
-### Utilizando SaveAsync
-```c#
-    public virtual async Task SaveAsync(Classe objeto)
-    {
-        await base.SaveAsync(objeto);
-    }
-```
-
-### Utilizando SaveInListAsync
-```c#
-    public virtual async Task SaveInListAsync(IEnumerable<Classe> lista)
-    {
-        await base.SaveInListAsync(lista);
-    }
-```
-
-### Utilizando DeleteAsync
-```c#
-    public async virtual Task<bool> DeleteAsync(Classe objeto)
-    {
-        return await base.DeleteAsync(objeto);
-    }
-```
-
-### Utilizando DeleteMultipleAsync
-```c#
-    public virtual async Task DeleteMultipleAsync(Expression<Func<TEntity, bool>> predicate)
-    {
-        await base.DeleteMultipleAsync(predicate);
-    }
 ```
 
 ### Utilizando ExecuteMultiply
@@ -131,6 +94,48 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
     }
 ```
 
+### GetPagedAsync
+```c#
+    public async Task<IEnumerable<Classe>> GetPagedAsync(int pageNumber, int pageSize)
+    {
+        return await base.GetPagedAsync(pageNumber, pageSize);
+    }
+```
+## Salvar
+### SaveAsync
+```c#
+    public virtual async Task SaveAsync(Classe objeto)
+    {
+        await base.SaveAsync(objeto);
+    }
+```
+
+### SaveInListAsync
+```c#
+    public virtual async Task SaveInListAsync(IEnumerable<Classe> lista)
+    {
+        await base.SaveInListAsync(lista);
+    }
+```
+
+## Deletar
+### DeleteAsync
+```c#
+    public async virtual Task<bool> DeleteAsync(Classe objeto)
+    {
+        return await base.DeleteAsync(objeto);
+    }
+```
+
+### DeleteMultipleAsync
+```c#
+    public virtual async Task DeleteMultipleAsync(Expression<Func<TEntity, bool>> predicate)
+    {
+        await base.DeleteMultipleAsync(predicate);
+    }
+```
+
+## Validação
 ### Utilizando AnyAsync
 ```c#
     public async Task<bool> Existe(Guid id)
@@ -139,6 +144,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
     }
 ```
 
+## Transação
 ### Utilizando Utilizando Transação
 ```c#
     using (var trans = new Dapper.Core.Base.TransactionScope(_repository1, _repository2, _repository3))
