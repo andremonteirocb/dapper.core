@@ -1,6 +1,6 @@
 # dapper.core
 .NET Class Library for integration with DAPPER <br />
-.NET Framework 3.0
+.NET Core 3.0
 
 ### Informando a connection string (startup.cs)
 ```c# 
