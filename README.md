@@ -1,6 +1,8 @@
 # dapper.core
-Biblioteca de classes .NET para integração com DAPPER
+.NET Class Library for integration with DAPPER <br />
+.NET Framework 3.0
 
-```c#
--> Para indicar a sua connectionstring adicione a linha abaixo no seu arquivo startup.cs:
+### Para indicar a sua connectionstring adicione a linha abaixo no seu arquivo startup.cs
+```c# 
 Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetConnectionString("connectionstring_name"));
+```
