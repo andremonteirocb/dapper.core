@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace Dapper.Core.Configurations
+﻿namespace Dapper.Core.Configurations
 {
     public static class ConfiguracaoRepository
     {
