@@ -5,10 +5,6 @@
     <PackageId>Dapper.Core</PackageId>
     <AssemblyName>Dapper.Core</AssemblyName>
     <RootNamespace>Dapper.Core</RootNamespace>
-    <Author>André Monteiro</Author>
-    <Description>Biblioteca para trabalhar com dapper em projetos asp.net core 3.0</Description>
-    <Company>Phidelis</Company>
-    <Version>1.0.0.30</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <ApplicationIcon />
     <Win32Resource />
