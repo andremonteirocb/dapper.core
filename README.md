@@ -9,7 +9,7 @@ Dapper.Core.Configurations.ConfiguracaoRepository.Configure(Configuration.GetCon
 ```
 
 ## Implementação
-### Interface IRepository
+### IRepository
 ```c#
   public class LogRepository : Repository<Log>, ILogRepository
   {
